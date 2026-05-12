@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>por que te gustoo</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+
+</head>
+<body>
+    
+
+
+
+<!-- MENU -->
+    
+<div id="menu" class="screen active">
+    <h1> el por que de todo </h1>
+    <button onclick="show('p1')">¿Por qué te gusto?</button>
+    <button onclick="show('p2')">¿Desde cuándo?</button>
+    <button onclick="show('p3')">¿Primera impresión?</button>
+    <button onclick="show('p4')">¿Cómo te diste cuenta?</button>
+    <button onclick="show('p5')">¿Por qué tu?</button>
+    <button onclick="show('p6')">unas pequeñas disculpas</button>
+
+     <audio id="audio1" src="audio/sweetly.mp3"></audio>
+</div>
+
+<!-- RESPUESTAS -->
+<div id="p1" class="screen p1">
+    <h1>¿Por qué te gusto?</h1>
+    <p>Porque incluso cuando no lo intentas, destacas.</p>
+   <p>Porque contigo todo se siente más suave.
+Tu alegría contagia, tus caricias tranquilizan y tu forma de querer hace difícil no quedarse.
+Y entre tantas personas, tú fuiste la que logró hacerme sentir visto sin siquiera intentarlo.</p>
+    <audio id="audio1" src="audio/Apocalypse-CigarettesAfterSex.mp3"></audio>
+  
+    <button onclick="show('menu')">Volver</button>
+
+</div>
+
+<div id="p2" class="screen p2">
+    <h1>¿Desde cuándo?</h1>
+    <p>Desde ese momento pequeño que parecía nada… pero se quedó.</p>
+    <p>Desde la primera vez que te vi me pareciste alguien diferente, especial, lo sufisente como para romper mi monotonia solo para hacer algo con tigo, por eso me gustas desde la primera vez que te vi </p>
+    <audio id="audio2" src="audio/Golden Hour-JVKE.mp3"></audio>
+
+    
+    <button onclick="show('menu')">Volver</button>
+
+</div>
+
+<div id="p3" class="screen p3">
+    <h1>Primera impresión</h1>
+    <p>Pensé: “tiene algo distinto… y me atrapó”.</p>
+    <p>Lo primero que noté fue tu mirada.
+Después tu pelo, tu forma de expresarte y esa energía tan viva que tienes.
+Pensé: “ella tiene algo que no se encuentra fácil”.</p>
+    <audio id="audio3" src="audio/SweaterWeather-TheNeighbourhood.mp3"></audio>
+ 
+
+    <button onclick="show('menu')">Volver</button>
+</div>
+
+<div id="p4" class="screen p4">
+    <h1>¿Cómo me di cuenta?</h1>
+    <p>Cuando empecé a pensar en ti sin razón lógica.</p>
+    <p>Cuando empecé a esperar tus mensajes más de lo normal.
+Cuando tus abrazos comenzaron a sentirse como paz.
+Y cuando entendí que, incluso en días simples, tú eras la parte que más me alegraba.</p>
+    <audio src="audio/"></audio>
+    <button onclick="show('menu')">Volver</button>
+</div>
+
+<div id="p5" class="screen p5">
+    <h1>¿Por qué tú?</h1>
+    <p>Porque sí y eso a veces es más fuerte que cualquier explicación.</p>
+    <p>Porque contigo no tengo que forzar nada.
+Todo fluye de una manera tranquila y bonita.
+Y aunque todavía estamos escribiendo nuestra historia sinceramente espero que sea una larga.</p>
+    <audio id="audio5" src="audio/Just the Two of Us-Grover Washington Jr..mp3"></audio>
+    <button onclick="show('menu')">Volver</button>
+</div>
+
+    
+<div id="p6" class="screen p6">
+    <h1>disculpas </h1>
+    <p>perdoname por ser tan serio, tan yoo, se que debo ser mas expresivo con tigo y lo ciento si no lo soy, la verdad quiero que esto dure simpre, que nunca se acabe, que si te disgusta algo de mi, dimelo, que si viene de tii lo voy a cambiar. perdoname por no saber amarte como deberia. te amo, te quiero, te adoro y aunque no lo creas simpre estas en mi cabeza  </p>
+    
+    <audio id="audio5" src="audio/Just the Two of Us-Grover Washington Jr..mp3"></audio>
+    <button onclick="show('menu')">Volver</button>
+</div>
+<script>
+function show(id){
+
+    // Oculta pantallas
+    document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+
+    // Pausa TODOS los audios
+    document.querySelectorAll('audio').forEach(a => {
+        a.pause();
+        a.currentTime = 0;
+    });
+
+    // Muestra pantalla actual
+    const screen = document.getElementById(id);
+    screen.classList.add('active');
+
+    // Reproduce audio si existe
+    const audio = screen.querySelector('audio');
+    if(audio){
+        audio.play();
+    }
+}
+
+</script>
+
+
+
+</body>
+</html>
